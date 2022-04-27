@@ -7,7 +7,7 @@ export default function Result({ name }) {
 
   return (
     <div>
-      <Seo title="result" />
+      <Seo title={name} />
       <div className="container">
         <div className="img">
           <img src={`/dog_image/${name}.png`} width={300} />

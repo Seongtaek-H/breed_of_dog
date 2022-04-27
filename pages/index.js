@@ -34,8 +34,12 @@ export default function Home() {
           font-size: 1.1rem;
           font-weight: bold;
         }
+        .home_context p {
+          margin: 12px;
+        }
         .btn {
-          background-color: plum;
+          background-color: black;
+          color: white;
           margin-top: 1%;
           padding: 3% 5%;
           cursor: pointer;

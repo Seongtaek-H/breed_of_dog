@@ -10,7 +10,7 @@ export default function Header() {
           justify-content: center;
           align-items: center;
           width: 100%;
-          height: 8%;
+          height: 55px;
           font-size: 1.1rem;
         }
       `}</style>

@@ -1,10 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 import Seo from "../../components/Seo";
+import { ShareKakao } from "../../components/share";
 import { BREED_DETAIL } from "../../constants/BREED_DETAIL";
 
 export default function Result({ name }) {
   const result = BREED_DETAIL[name] || "";
+  const API_KEY = process.env.NEXT_PUBLIC_KAKAO_KEY;
+
+  useEffect(() => {
+    initKakaoSdk();
+  }, []);
+
+  const initKakaoSdk = () => {
+    const { Kakao } = window;
+    if (!Kakao.isInitialized()) Kakao.init(API_KEY);
+  };
 
   return (
     <div>
@@ -20,16 +32,22 @@ export default function Result({ name }) {
             <a>다시하기</a>
           </Link>
         </div>
+        <button
+          onClick={() => {
+            ShareKakao();
+          }}
+        >
+          카카오톡 공유하기
+        </button>
         <style jsx>{`
           .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 10%;
+            margin-top: 5%;
           }
 
           .name {
-            margin-top: 5%;
             font-size: 1.5rem;
             font-weight: bold;
           }
@@ -44,7 +62,7 @@ export default function Result({ name }) {
           }
           .btn {
             background-color: plum;
-            margin-top: 1%;
+            margin-top: 5%;
             padding: 3% 5%;
             cursor: pointer;
             border-radius: 5%;

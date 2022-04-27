@@ -87,7 +87,7 @@ export default function Test() {
           margin-top: 10%;
         }
         .question {
-          width: 400px;
+          width: 380px;
 
           padding: 30px 10px;
           background-color: aliceblue;

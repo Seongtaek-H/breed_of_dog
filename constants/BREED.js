@@ -21,7 +21,7 @@ export const BREED = {
   },
   SMALL: {
     INF: "토이푸들",
-    INT: "젝러셀테리어",
+    INT: "잭러셀테리어",
     IST: "비숑",
     ISF: "미니어쳐슈나우저",
     ENF: "퍼그",

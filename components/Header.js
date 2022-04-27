@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <div>
-      <h3>나에게 어울리는 견종은?</h3>
+      <h3>나에게 어울리는 견종은❓🐾</h3>
       <style jsx>{`
         div {
           background-color: white;

@@ -1,19 +1,18 @@
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import Image from "next/image";
 import Seo from "../../components/Seo";
 import { BREED_DETAIL } from "../../constants/BREED_DETAIL";
 
-export default function Result() {
-  const router = useRouter();
-
-  const result = BREED_DETAIL[router.query.parms] || "";
+export default function Result({ name }) {
+  const result = BREED_DETAIL[name] || "";
 
   return (
     <div>
       <Seo title="result" />
       <div className="container">
-        <div className="img"></div>
-        <div className="name">{router.query.parms}💖</div>
+        <div className="img">
+          <img src={`/dog_image/${name}.png`} width={300} />
+        </div>
+        <div className="name">{name}💖</div>
         <div className="ctx">{result.context}</div>
         <style jsx>{`
           .container {
@@ -22,11 +21,7 @@ export default function Result() {
             align-items: center;
             margin-top: 10%;
           }
-          .img {
-            background-color: blue;
-            width: 350px;
-            height: 350px;
-          }
+
           .name {
             margin-top: 5%;
             font-size: 1.5rem;
@@ -45,4 +40,10 @@ export default function Result() {
       </div>
     </div>
   );
+}
+
+export function getServerSideProps({ params: { name } }) {
+  return {
+    props: { name },
+  };
 }

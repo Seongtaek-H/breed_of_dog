@@ -12,7 +12,7 @@ export default function Layout({ children }) {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: black;
+          background-color: #c5d9ed;
           height: 100%;
         }
         .container {

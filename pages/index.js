@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <div className="home">
       <Seo title="Start" />
-      <div className="home_img"></div>
+      <div className="home_img">
+        <img src="/poster.png" width={360} />
+      </div>
       <div className="home_context">
         <p>1500만 반려동물 시대! </p>
         <p>우리에게 가장 친숙하고 이젠 가족이 된 강아지</p>
@@ -24,21 +26,17 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin-top: 10%;
-        }
-        .home_img {
-          background-color: blue;
-          width: 350px;
-          height: 350px;
-        }
-        .home_context {
           margin-top: 5%;
-          font-size: 1.2rem;
+        }
+
+        .home_context {
+          margin-top: 1%;
+          font-size: 1.1rem;
           font-weight: bold;
         }
         .btn {
           background-color: plum;
-          margin-top: 3%;
+          margin-top: 1%;
           padding: 3% 5%;
           cursor: pointer;
           border-radius: 5%;

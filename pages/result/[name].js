@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import Seo from "../../components/Seo";
-import { ShareKakao } from "../../components/share";
+import { ShareKakao } from "../../components/Share";
 import { BREED_DETAIL } from "../../constants/BREED_DETAIL";
 
 export default function Result({ name }) {

@@ -16,6 +16,7 @@ export const ShareKakao = (name, ctx) => {
         title: "결과 확인하기",
         link: {
           mobileWebUrl: `https://breed-of-dog.vercel.app/result/${name}`,
+          webUrl: `https://breed-of-dog.vercel.app/result/${name}`,
         },
       },
     ],

@@ -33,11 +33,16 @@ export default function Result({ name }) {
           </Link>
         </div>
         <button
+          className="kakao_btn"
           onClick={() => {
             ShareKakao(name, result.context);
           }}
         >
-          카카오톡 공유하기
+          <img
+            width={30}
+            src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+          />
+          <p>카카오톡 공유하기</p>
         </button>
         <style jsx>{`
           .container {
@@ -65,13 +70,27 @@ export default function Result({ name }) {
             margin-top: 5%;
             padding: 3% 5%;
             cursor: pointer;
-            border-radius: 5%;
+            border-radius: 10px;
             font-size: 1.5rem;
             font-weight: bolder;
           }
           .btn:hover {
             background-color: orange;
             transform: scale(1.2);
+          }
+          .kakao_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+            width: 200px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 10px;
+            padding: ;
+            background-color: #f9e000;
+            border: none;
+            cursor: pointer;
           }
         `}</style>
       </div>

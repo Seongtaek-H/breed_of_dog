@@ -4,7 +4,7 @@ import Seo from "../components/Seo";
 export default function Home() {
   return (
     <div className="home">
-      <Seo title="Start" />
+      <Seo title="나에게 어울리는 견종은?" />
       <div className="home_img">
         <img src="/poster.png" width={360} />
       </div>

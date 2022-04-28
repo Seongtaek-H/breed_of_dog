@@ -16,6 +16,7 @@ export default function Result({ name }) {
   const initKakaoSdk = () => {
     const { Kakao } = window;
     if (!Kakao.isInitialized()) Kakao.init(API_KEY);
+    console.log(window.Kakao);
   };
 
   return (

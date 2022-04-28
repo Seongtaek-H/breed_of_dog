@@ -34,7 +34,7 @@ export default function Result({ name }) {
         </div>
         <button
           onClick={() => {
-            ShareKakao();
+            ShareKakao(name, result.context);
           }}
         >
           카카오톡 공유하기

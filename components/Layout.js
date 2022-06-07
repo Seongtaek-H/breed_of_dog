@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Header from "./Header";
 
 export default function Layout({ children }) {
+  
   return (
     <div className="background">
       <div className="container">

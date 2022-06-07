@@ -22,9 +22,8 @@
 - 나에게 어울리는 견종 매칭
   ![](https://i.imgur.com/AK2mmOm.jpg)
 
-* 카카오톡 공유하기 기능
-  ![](https://i.imgur.com/asKPa2N.png)
+* 카카오톡 공유하기 기능<br>
+  <img src="https://i.imgur.com/asKPa2N.png" align="left" width="400px">
   <br>
   <br>
 
-**copyright 2022. Seongtaek Hwang all right reselved.**

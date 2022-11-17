@@ -6,14 +6,14 @@ import { ShareKakao } from '../../components/Share';
 import { BREED_DETAIL } from '../../constants/BREED_DETAIL';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import Loading from '../../components/Loading';
 
 const API_KEY = process.env.NEXT_PUBLIC_KAKAO_KEY;
 
-export default function Result() {
+const Result = () => {
   const router = useRouter();
-  const { name }: string = router.query;
-  console.log(name);
-  const result = BREED_DETAIL[name] || '';
+  const name = router.query.name as string;
+  const result = BREED_DETAIL[name];
 
   useEffect(() => {
     initKakaoSdk();
@@ -23,37 +23,38 @@ export default function Result() {
     const { Kakao }: any = window;
     if (!Kakao.isInitialized()) Kakao.init(API_KEY);
   };
-
-  return (
-    <>
-      <Seo title={name} />
-      <Container>
-        <div>
-          <Image
-            src={`/dog_image/${name}.png`}
-            width={300}
-            height={300}
-            alt='Loading'
-            priority
-          />
-        </div>
-        <Name>{name} 💖</Name>
-        <Context>{result.context}</Context>
-        <ReplayBtn>
-          <Link href='/'>다시하기</Link>
-        </ReplayBtn>
-        <KaKaoShareBtn
-          onClick={() => {
-            ShareKakao(name, result.context);
-          }}
-        >
-          <Image width={30} height={30} src='/kakao_btn.png' alt='' />
-          <p>카카오톡 공유하기</p>
-        </KaKaoShareBtn>
-      </Container>
-    </>
-  );
-}
+  if (name) {
+    return (
+      <>
+        <Seo title={name} />
+        <Container>
+          <div>
+            <Image
+              src={`/dog_image/${name}.png`}
+              width={300}
+              height={300}
+              alt='Loading'
+            />
+          </div>
+          <Name>{name} 💖</Name>
+          <Context>{result.context}</Context>
+          <ReplayBtn>
+            <Link href='/'>다시하기</Link>
+          </ReplayBtn>
+          <KaKaoShareBtn
+            onClick={() => {
+              ShareKakao(name, result.context);
+            }}
+          >
+            <Image width={30} height={30} src='/kakao_btn.png' alt='' />
+            <p>카카오톡 공유하기</p>
+          </KaKaoShareBtn>
+        </Container>
+      </>
+    );
+  }
+  return <Loading />;
+};
 
 const Container = styled.div`
   display: flex;
@@ -103,3 +104,5 @@ const KaKaoShareBtn = styled.button`
   border: none;
   cursor: pointer;
 `;
+
+export default Result;

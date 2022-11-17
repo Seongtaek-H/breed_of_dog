@@ -8,13 +8,7 @@ const Start = (): JSX.Element => (
   <Container>
     <Seo title='나에게 어울리는 견종은?' />
     <div className='home_img'>
-      <Image
-        src='/poster.png'
-        width={360}
-        height={500}
-        alt='Loading'
-        priority
-      />
+      <Image src='/poster.png' width={360} height={500} alt='Loading' />
     </div>
     <Context>
       <p>1500만 반려동물 시대! </p>

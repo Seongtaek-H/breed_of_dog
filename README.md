@@ -1,34 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [나에게 어울리는 견종은?](https://breed-of-dog.vercel.app/)
 
-## Getting Started
+나에게 어울리는 견종은 어떤 종일까?
+내 유형을 통해 알아보는 나에게 어울리는 견종을 알아보자!
+<br>
 
-First, run the development server:
+## 🐾 Introduce
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+10개의 문항을 통해 나에게 어울리는 견종을 알 수 있습니다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+총 24가지의 견종 중 나에게 어울리는 견종은 어떤 견종일까요? (테스트 결과는 재미로만 하세요)
+<br>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 🧑🏻‍💻 Skills
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<img src="https://img.shields.io/badge/Next.js-black?&logo=next.js" /> ![img](https://camo.githubusercontent.com/c72afd2067f325eb1042f4e82cc76c6814393feb3dbf37a9600f8332ba93c34d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6a6176617363726970742d79656c6c6f773f7374796c653d666c61742d737175617265266c6f676f3d6a617661736372697074266c6f676f436f6c6f723d626c61636b)
+<br>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 🖥 Function
 
-## Learn More
+- 내 유형 검사
+- 나에게 어울리는 견종 매칭
+  ![](https://i.imgur.com/AK2mmOm.jpg)
 
-To learn more about Next.js, take a look at the following resources:
+* 카카오톡 공유하기 기능<br>
+  <img src="https://i.imgur.com/asKPa2N.png" align="left" width="400px">
+  <br>
+  <br>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

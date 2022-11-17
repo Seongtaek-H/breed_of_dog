@@ -1,4 +1,8 @@
-export const BREED_DETAIL = {
+type BREED_DETAILType = {
+  [key: string]: { context: string };
+};
+
+export const BREED_DETAIL: BREED_DETAILType = {
   풍산개: {
     context:
       '호랑이를 잡는 개라고 불릴 정도로 용맹스러운 풍산개! 사회성도 뛰어나 다른 동물들과도 잘 어울려지낸다',

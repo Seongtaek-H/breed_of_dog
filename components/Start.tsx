@@ -7,9 +7,7 @@ import Seo from './Seo';
 const Start = (): JSX.Element => (
   <Container>
     <Seo title='나에게 어울리는 견종은?' />
-    <div className='home_img'>
-      <Image src='/poster.png' width={360} height={500} alt='Loading' />
-    </div>
+    <PostImage src='/poster.png' width={360} height={500} alt='Loading' />
     <Context>
       <p>1500만 반려동물 시대! </p>
       <p>우리에게 가장 친숙하고 이젠 가족이 된 강아지</p>
@@ -28,6 +26,11 @@ const Container = styled.div`
   justify-content: center;
   margin-top: 5%;
 `;
+
+const PostImage = styled(Image)`
+  border-radius: 20px;
+`;
+
 const Context = styled.div`
   margin-top: 1%;
   font-size: 1.1rem;
@@ -36,13 +39,14 @@ const Context = styled.div`
     margin: 12px;
   }
 `;
+
 const StartBtn = styled(Link)`
   background-color: black;
   color: white;
   margin-top: 3%;
   padding: 3% 5%;
   cursor: pointer;
-  border-radius: 5%;
+  border-radius: 10px;
   font-size: 1.5rem;
   font-weight: bolder;
   :hover {

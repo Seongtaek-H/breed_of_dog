@@ -13,7 +13,7 @@
 
 ## 🧑🏻‍💻 Skills
 
-<img src="https://img.shields.io/badge/Next.js-black?&logo=next.js" /> ![img](https://camo.githubusercontent.com/c72afd2067f325eb1042f4e82cc76c6814393feb3dbf37a9600f8332ba93c34d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6a6176617363726970742d79656c6c6f773f7374796c653d666c61742d737175617265266c6f676f3d6a617661736372697074266c6f676f436f6c6f723d626c61636b)
+<img src="https://img.shields.io/badge/Next.js-black?&logo=next.js" /> <img src="https://img.shields.io/badge/Typescript-blue?style=flat-square&logo=Typescript&logoColor=white"/>
 <br>
 
 ## 🖥 Function
@@ -26,4 +26,3 @@
   <img src="https://i.imgur.com/asKPa2N.png" align="left" width="400px">
   <br>
   <br>
-

@@ -1,4 +1,9 @@
-export const ShareKakao = (name, ctx) => {
+const API_KEY = process.env.NEXT_PUBLIC_KAKAO_KEY;
+
+export const ShareKakao = (name: string, ctx: string) => {
+  const { Kakao }: any = window;
+  if (!Kakao.isInitialized()) Kakao.init(API_KEY);
+
   Kakao.Link.sendDefault({
     objectType: 'feed',
     content: {
@@ -22,3 +27,5 @@ export const ShareKakao = (name, ctx) => {
     ],
   });
 };
+
+export const ShareFB = () => {};

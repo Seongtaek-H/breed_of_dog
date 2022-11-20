@@ -7,40 +7,31 @@ import { BREED_DETAIL } from '../../constants/BREED_DETAIL';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import Loading from '../../components/Loading';
-
-const API_KEY = process.env.NEXT_PUBLIC_KAKAO_KEY;
+import Header from '../../components/Header';
 
 const Result = () => {
   const router = useRouter();
   const name = router.query.name as string;
   const result = BREED_DETAIL[name];
 
-  useEffect(() => {
-    initKakaoSdk();
-  }, []);
-
-  const initKakaoSdk = () => {
-    const { Kakao }: any = window;
-    if (!Kakao.isInitialized()) Kakao.init(API_KEY);
-  };
   if (name) {
     return (
       <>
         <Seo title={name} />
+        <Header />
         <Container>
-          <div>
+          <DogImage>
             <Image
               src={`/dog_image/${name}.png`}
               width={300}
               height={300}
               alt='Loading'
+              placeholder='blur'
+              blurDataURL={`/dog_image/${name}.png`}
             />
-          </div>
-          <Name>{name} 💖</Name>
+            <Name>{name} 💖</Name>
+          </DogImage>
           <Context>{result.context}</Context>
-          <ReplayBtn>
-            <Link href='/'>다시하기</Link>
-          </ReplayBtn>
           <KaKaoShareBtn
             onClick={() => {
               ShareKakao(name, result.context);
@@ -49,6 +40,9 @@ const Result = () => {
             <Image width={30} height={30} src='/kakao_btn.png' alt='' />
             <p>카카오톡 공유하기</p>
           </KaKaoShareBtn>
+          <ReplayBtn>
+            <Link href='/'>다시하기</Link>
+          </ReplayBtn>
         </Container>
       </>
     );
@@ -62,23 +56,36 @@ const Container = styled.div`
   align-items: center;
   margin-top: 5%;
 `;
+const DogImage = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  border: 2px solid grey;
+  border-radius: 20px;
+`;
 const Name = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
 `;
 
 const Context = styled.div`
   margin-top: 2%;
   width: 380px;
-  padding: 30px 10px;
+  padding: 12px;
   background-color: whitesmoke;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   border: 2px cornflowerblue solid;
   border-radius: 10px;
 `;
 
 const ReplayBtn = styled.div`
-  background-color: plum;
+  background-color: black;
+  color: white;
+  width: 80%;
+  text-align: center;
   margin-top: 5%;
   padding: 3% 5%;
   cursor: pointer;
@@ -87,7 +94,7 @@ const ReplayBtn = styled.div`
   font-weight: bolder;
   :hover {
     background-color: orange;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 `;
 const KaKaoShareBtn = styled.button`

@@ -36,12 +36,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <script
-            defer
-            src='https://developers.kakao.com/sdk/js/kakao.js'
-          ></script>
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />

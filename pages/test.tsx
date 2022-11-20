@@ -5,6 +5,7 @@ import { BREED } from '../constants/BREED';
 import { useRouter } from 'next/router';
 import Seo from '../components/Seo';
 import styled from 'styled-components';
+import Header from '../components/Header';
 
 type Mbti = {
   [key: string]: number;
@@ -78,6 +79,7 @@ const Test = () => {
   return (
     <>
       <Seo title='Test' />
+      <Header />
       <ProgressBar sequence={sequence}></ProgressBar>
       <Container>
         <Question>{question}</Question>
@@ -110,7 +112,7 @@ const Question = styled.div`
   font-size: 1.3rem;
   font-weight: bolder;
   border: 2px cornflowerblue solid;
-  border-radius: 10px;
+  border-radius: 15px;
 `;
 
 const OptionContainer = styled.div`
@@ -119,7 +121,8 @@ const OptionContainer = styled.div`
 const Option = styled.div`
   width: 350px;
   cursor: pointer;
-  border: 1px palevioletred solid;
+  border: 1.5px palevioletred solid;
+  border-radius: 10px;
   margin-top: 5%;
   padding: 4%;
   background-color: whitesmoke;

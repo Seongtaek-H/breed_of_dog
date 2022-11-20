@@ -78,7 +78,7 @@ const Test = () => {
 
   return (
     <>
-      <Seo title='Test' />
+      <Seo title='Testing...' />
       <Header />
       <ProgressBar sequence={sequence}></ProgressBar>
       <Container>

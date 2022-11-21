@@ -20,7 +20,7 @@
 
 - 내 유형 검사
 - 나에게 어울리는 견종 매칭
-  <img src="/info.png"/>
+  <img src="https://raw.githubusercontent.com/Seongtaek-H/breed_of_dog/master/public/info.png"/>
 
 * 공유하기 기능<br>
   - 카카오톡, 페이스북, 링크복사를 통한 공유 기능

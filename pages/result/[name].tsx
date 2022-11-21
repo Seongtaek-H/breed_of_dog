@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Seo from '../../components/Seo';
-import { ShareKakao } from '../../components/Share';
+import { copyLink, ShareFB, ShareKakao } from '../../components/Share';
 import { BREED_DETAIL } from '../../constants/BREED_DETAIL';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import Loading from '../../components/Loading';
 import Header from '../../components/Header';
+import Metatag from '../../components/MetaTag';
 
 const Result = () => {
   const router = useRouter();
@@ -17,7 +17,7 @@ const Result = () => {
   if (name) {
     return (
       <>
-        <Seo title={name} />
+        <Metatag name={name} context={result.context} />
         <Header />
         <Container>
           <DogImage>
@@ -25,21 +25,48 @@ const Result = () => {
               src={`/dog_image/${name}.png`}
               width={300}
               height={300}
-              alt='Loading'
-              placeholder='blur'
-              blurDataURL={`/dog_image/${name}.png`}
+              alt='Dog_Image'
             />
             <Name>{name} 💖</Name>
           </DogImage>
           <Context>{result.context}</Context>
-          <KaKaoShareBtn
-            onClick={() => {
-              ShareKakao(name, result.context);
-            }}
-          >
-            <Image width={30} height={30} src='/kakao_btn.png' alt='' />
-            <p>카카오톡 공유하기</p>
-          </KaKaoShareBtn>
+          <Share>
+            <p>친구들에게 공유하기</p>
+            <ShareBtnContainer>
+              <ShareBtn
+                onClick={() => {
+                  ShareKakao(name, result.context);
+                }}
+              >
+                <Image
+                  width={30}
+                  height={30}
+                  src='/kakao_btn.png'
+                  alt='Kakao'
+                />
+              </ShareBtn>
+              <ShareBtn
+                onClick={() => {
+                  ShareFB(name);
+                }}
+              >
+                <Image
+                  width={30}
+                  height={30}
+                  src='/FB_btn.png'
+                  alt='FB'
+                  style={{ borderRadius: '5px' }}
+                />
+              </ShareBtn>
+              <ShareBtn
+                onClick={() => {
+                  copyLink(name);
+                }}
+              >
+                <Image width={30} height={30} src='/link_btn.png' alt='link' />
+              </ShareBtn>
+            </ShareBtnContainer>
+          </Share>
           <ReplayBtn>
             <Link href='/'>다시하기</Link>
           </ReplayBtn>
@@ -97,19 +124,27 @@ const ReplayBtn = styled.div`
     transform: scale(1.1);
   }
 `;
-const KaKaoShareBtn = styled.button`
+const Share = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
-  width: 200px;
   font-size: 1.2rem;
   font-weight: bold;
-  border-radius: 10px;
   padding: 10px;
-  background-color: #f9e000;
+  p {
+    font-size: 16px;
+  }
+`;
+const ShareBtnContainer = styled.div`
+  margin-left: 10px;
+`;
+const ShareBtn = styled.button`
   border: none;
+  margin-right: 10px;
+  padding: 0;
   cursor: pointer;
+  background: none;
 `;
 
 export default Result;

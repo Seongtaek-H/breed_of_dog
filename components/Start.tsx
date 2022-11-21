@@ -6,7 +6,6 @@ import Seo from './Seo';
 
 const Start = (): JSX.Element => (
   <Container>
-    <Seo title='나에게 어울리는 견종은?' />
     <PostImage src='/poster.png' width={360} height={500} alt='Loading' />
     <Context>
       <p>1500만 반려동물 시대! </p>

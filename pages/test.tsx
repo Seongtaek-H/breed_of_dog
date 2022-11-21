@@ -3,9 +3,9 @@ import ProgressBar from '../components/ProgressBar';
 import { MbtiType, QUESTION_LIST, SizeType } from '../constants/QUESTION_LIST';
 import { BREED } from '../constants/BREED';
 import { useRouter } from 'next/router';
-import Seo from '../components/Seo';
 import styled from 'styled-components';
 import Header from '../components/Header';
+import Metatag from '../components/MetaTag';
 
 type Mbti = {
   [key: string]: number;
@@ -78,7 +78,7 @@ const Test = () => {
 
   return (
     <>
-      <Seo title='Testing...' />
+      <Metatag />
       <Header />
       <ProgressBar sequence={sequence}></ProgressBar>
       <Container>

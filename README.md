@@ -20,9 +20,8 @@
 
 - 내 유형 검사
 - 나에게 어울리는 견종 매칭
-  ![](https://i.imgur.com/AK2mmOm.jpg)
+  <img src="/info.png"/>
 
-* 카카오톡 공유하기 기능<br>
-  <img src="https://i.imgur.com/asKPa2N.png" align="left" width="400px">
-  <br>
-  <br>
+* 공유하기 기능<br>
+  - 카카오톡, 페이스북, 링크복사를 통한 공유 기능
+    <br>

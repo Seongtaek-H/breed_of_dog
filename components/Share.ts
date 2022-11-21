@@ -35,7 +35,7 @@ export const ShareFB = (name: string) => {
     appId: FB_API_ID,
     status: true,
     xfbml: true,
-    version: 'v2.7',
+    version: 'v15.0',
   });
   FB.ui(
     {

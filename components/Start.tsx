@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
-import Seo from './Seo';
 
 const Start = (): JSX.Element => (
   <Container>
